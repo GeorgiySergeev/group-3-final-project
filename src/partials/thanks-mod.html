@@ -22,48 +22,47 @@
 
   <body>
     <main>
-      <div class="thankyou-backdrop is-hidden" data-modal>
-        <div class="thankyou-modal">
-          <button
-            class="thankyou-modal-close-btn"
-            type="button"
-            data-modal-close
+      <div class="thankyou-modal modal" data-modal="2">
+        <button
+          class="thankyou-modal-close-btn js-modal-close"
+          type="button"
+          data-modal-close
+        >
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              width="24"
-              height="24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M18 6 6 18M6 6l12 12"
-                stroke="#fff"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-          <img
-            class="strawberry-photo"
-            srcset="
-              ../img/png/strawberry@1x.png 1x,
-              ../img/png/strawberry@2x.png 2x
-            "
-            src="../img/png/strawberry@1x.png"
-            width="207"
-            height="176"
-            alt="Strawberry"
-          />
-          <h1 class="modal-thankyou-title">THANK YOU</h1>
-          <p class="modal-thankyou-subtitle">
-            Thank you for your order! Our team is preparing your box with fresh,
-            delicious fruits and vegetables, and we'll deliver it straight to
-            your doorstep. We appreciate your business and look forward to
-            providing you with the best possible experience!
-          </p>
-        </div>
+            <path
+              d="M18 6 6 18M6 6l12 12"
+              stroke="#fff"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <img
+          class="strawberry-photo"
+          srcset="
+            ../img/png/strawberry@1x.png 1x,
+            ../img/png/strawberry@2x.png 2x
+          "
+          src="../img/png/strawberry@1x.png"
+          width="207"
+          height="176"
+          alt="Strawberry"
+        />
+        <h1 class="modal-thankyou-title">THANK YOU</h1>
+        <p class="modal-thankyou-subtitle">
+          Thank you for your order! Our team is preparing your box with fresh,
+          delicious fruits and vegetables, and we'll deliver it straight to your
+          doorstep. We appreciate your business and look forward to providing
+          you with the best possible experience!
+        </p>
       </div>
+      <div class="overlay js-overlay-modal"></div>
     </main>
     <script src="../js/modal.js"></script>
   </body>
