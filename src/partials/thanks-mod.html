@@ -14,14 +14,46 @@
       />
     </svg>
   </button>
-  <img
-    class="strawberry-photo"
-    srcset="../img/png/strawberry@1x.png 1x, ../img/png/strawberry@2x.png 2x"
-    src="../img/png/strawberry@1x.png"
-    width="207"
-    height="176"
-    alt="Strawberry"
-  />
+  <picture>
+    <source
+      media="(min-width: 768px)"
+      srcset="
+        ../img/thanks-mod/strawberry-desktop@1x.webp 1x,
+        ../img/thanks-mod/strawberry-desktop@2x.webp 2x
+      "
+      type="image/webp"
+    />
+    <source
+      media="(min-width: 768px)"
+      srcset="
+        ../img/thanks-mod/strawberry-desktop@1x.png 1x,
+        ../img/thanks-mod/strawberry-desktop@2x.png 2x
+      "
+      type="image/png"
+    />
+    <source
+      media="(min-width: 320px)"
+      srcset="
+        ../img/thanks-mod/strawberry@1x.webp 1x,
+        ../img/thanks-mod/strawberry@2x.webp 2x
+      "
+      type="image/webp"
+    />
+    <source
+      media="(min-width: 320px)"
+      srcset="
+        ../img/thanks-mod/strawberry@1x.png 1x,
+        ../img/thanks-mod/strawberry@2x.png 2x
+      "
+      type="image/png"
+    />
+    <img
+      src="../img/thanks-mod/strawberry@1x.png"
+      alt="Strawberry"
+      class="strawberry-photo"
+    />
+  </picture>
+
   <h1 class="modal-thankyou-title">THANK YOU</h1>
   <p class="modal-thankyou-subtitle">
     Thank you for your order! Our team is preparing your box with fresh,
@@ -30,4 +62,3 @@
     the best possible experience!
   </p>
 </div>
-<div class="overlay js-overlay-modal"></div>
