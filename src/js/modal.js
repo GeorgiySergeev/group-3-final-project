@@ -1,52 +1,55 @@
-
 var modalButtons = document.querySelectorAll('.js-open-modal'),
-       overlay      = document.querySelector('.js-overlay-modal'),
-       closeButtons = document.querySelectorAll('.js-modal-close');
+  overlay = document.querySelector('.js-overlay-modal'),
+  closeButtons = document.querySelectorAll('.js-modal-close');
 
+modalButtons.forEach(function (item) {
+  item.addEventListener('click', function (e) {
+    e.preventDefault();
 
-   modalButtons.forEach(function(item){
+    var modalId = this.getAttribute('data-modal'),
+      modalElem = document.querySelector(
+        '.modal[data-modal="' + modalId + '"]'
+      );
 
-   item.addEventListener('click', function(e) {
+    modalElem.classList.add('active');
+    overlay.classList.add('active');
 
-       e.preventDefault();
+    document.body.style.overflow = 'hidden';
+  });
+});
 
-       var modalId = this.getAttribute('data-modal'),
-             modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
+closeButtons.forEach(function (item) {
+  item.addEventListener('click', function (e) {
+    var parentModal = this.closest('.modal');
 
-         modalElem.classList.add('active');
-         overlay.classList.add('active');
-      }); 
+    parentModal.classList.remove('active');
+    overlay.classList.remove('active');
 
-   });
+    document.body.style.overflow = 'auto';
+  });
+}); // end foreach
 
+document.body.addEventListener(
+  'keyup',
+  function (e) {
+    var key = e.keyCode;
 
-   closeButtons.forEach(function(item){
+    if (key == 27) {
+      document.querySelector('.modal.active').classList.remove('active');
+      document.querySelector('.overlay').classList.remove('active');
 
-      item.addEventListener('click', function(e) {
-         var parentModal = this.closest('.modal');
+      document.body.style.overflow = 'auto';
+    }
+  },
+  false
+);
 
-         parentModal.classList.remove('active');
-         overlay.classList.remove('active');
-      });
+overlay.addEventListener('click', function () {
+  document.querySelector('.modal.active').classList.remove('active');
+  this.classList.remove('active');
 
-   }); // end foreach
-
-
-    document.body.addEventListener('keyup', function (e) {
-        var key = e.keyCode;
-
-        if (key == 27) {
-
-            document.querySelector('.modal.active').classList.remove('active');
-            document.querySelector('.overlay').classList.remove('active');
-        };
-    }, false);
-
-
-    overlay.addEventListener('click', function() {
-        document.querySelector('.modal.active').classList.remove('active');
-        this.classList.remove('active');
-    });
+  document.body.style.overflow = 'auto';
+});
 
 // (() => {
 //   const refs = {
@@ -62,4 +65,3 @@ var modalButtons = document.querySelectorAll('.js-open-modal'),
 //     refs.modal.classList.toggle("is-hidden");
 //   }
 // })();
-
