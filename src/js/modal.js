@@ -1,55 +1,56 @@
+
 var modalButtons = document.querySelectorAll('.js-open-modal'),
-  overlay = document.querySelector('.js-overlay-modal'),
-  closeButtons = document.querySelectorAll('.js-modal-close');
+       overlay      = document.querySelector('.js-overlay-modal'),
+       closeButtons = document.querySelectorAll('.js-modal-close');
 
-modalButtons.forEach(function (item) {
-  item.addEventListener('click', function (e) {
-    e.preventDefault();
 
-    var modalId = this.getAttribute('data-modal'),
-      modalElem = document.querySelector(
-        '.modal[data-modal="' + modalId + '"]'
-      );
+   modalButtons.forEach(function(item){
 
-    modalElem.classList.add('active');
-    overlay.classList.add('active');
+   item.addEventListener('click', function(e) {
 
-    document.body.style.overflow = 'hidden';
-  });
-});
+       e.preventDefault();
 
-closeButtons.forEach(function (item) {
-  item.addEventListener('click', function (e) {
-    var parentModal = this.closest('.modal');
+       var modalId = this.getAttribute('data-modal'),
+             modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
 
-    parentModal.classList.remove('active');
-    overlay.classList.remove('active');
+         modalElem.classList.add('active');
+         overlay.classList.add('active');
+         document.body.style.overflow = 'hidden';
+      }); 
 
-    document.body.style.overflow = 'auto';
-  });
-}); // end foreach
+   });
 
-document.body.addEventListener(
-  'keyup',
-  function (e) {
-    var key = e.keyCode;
 
-    if (key == 27) {
-      document.querySelector('.modal.active').classList.remove('active');
-      document.querySelector('.overlay').classList.remove('active');
+   closeButtons.forEach(function(item){
 
-      document.body.style.overflow = 'auto';
-    }
-  },
-  false
-);
+      item.addEventListener('click', function(e) {
+         var parentModal = this.closest('.modal');
 
-overlay.addEventListener('click', function () {
-  document.querySelector('.modal.active').classList.remove('active');
-  this.classList.remove('active');
+         parentModal.classList.remove('active');
+         overlay.classList.remove('active');
+         document.body.style.overflow = 'auto';
+      });
 
-  document.body.style.overflow = 'auto';
-});
+   }); // end foreach
+
+
+    document.body.addEventListener('keyup', function (e) {
+        var key = e.keyCode;
+
+        if (key == 27) {
+
+            document.querySelector('.modal.active').classList.remove('active');
+            document.querySelector('.overlay').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        };
+    }, false);
+
+
+    overlay.addEventListener('click', function() {
+        document.querySelector('.modal.active').classList.remove('active');
+        this.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
 
 // (() => {
 //   const refs = {
@@ -65,3 +66,4 @@ overlay.addEventListener('click', function () {
 //     refs.modal.classList.toggle("is-hidden");
 //   }
 // })();
+
