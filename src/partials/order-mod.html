@@ -246,7 +246,9 @@
         placeholder="Enter full name..."
       />
 
-      <label class="contact-label visually-hidden" for="user-email">Email</label>
+      <label class="contact-label visually-hidden" for="user-email"
+        >Email</label
+      >
       <input
         class="input-modal-field"
         type="email"
@@ -256,13 +258,14 @@
         placeholder="Enter email..."
       />
 
-      <label class="contact-label visually-hidden" for="card-nomber">Card nomber</label>
+      <label class="contact-label visually-hidden" for="card-nomber"
+        >Card number</label
+      >
       <input
         class="input-modal-field"
-        type="number"
-        step="1"
-        min="5"
-        max="9999999999999999"
+        type="text"
+        pattern="^[0-9]{5,45}$"
+        title="Your card number must be between 5 to 45 digitals."
         required
         name="card-nomber"
         id="card-nomber"

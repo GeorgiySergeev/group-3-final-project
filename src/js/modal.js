@@ -15,6 +15,7 @@ var modalButtons = document.querySelectorAll('.js-open-modal'),
 
          modalElem.classList.add('active');
          overlay.classList.add('active');
+         document.body.style.overflow = 'hidden';
       }); 
 
    });
@@ -27,6 +28,7 @@ var modalButtons = document.querySelectorAll('.js-open-modal'),
 
          parentModal.classList.remove('active');
          overlay.classList.remove('active');
+         document.body.style.overflow = 'auto';
       });
 
    }); // end foreach
@@ -39,6 +41,7 @@ var modalButtons = document.querySelectorAll('.js-open-modal'),
 
             document.querySelector('.modal.active').classList.remove('active');
             document.querySelector('.overlay').classList.remove('active');
+            document.body.style.overflow = 'auto';
         };
     }, false);
 
@@ -46,6 +49,7 @@ var modalButtons = document.querySelectorAll('.js-open-modal'),
     overlay.addEventListener('click', function() {
         document.querySelector('.modal.active').classList.remove('active');
         this.classList.remove('active');
+        document.body.style.overflow = 'auto';
     });
 
 // (() => {
