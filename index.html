@@ -18,7 +18,7 @@
     />
     
     <script type="module" crossorigin src="/group-3-final-project/assets/index-68cde817.js"></script>
-    <link rel="stylesheet" href="/group-3-final-project/assets/index-2e9d182e.css">
+    <link rel="stylesheet" href="/group-3-final-project/assets/index-d01a2d48.css">
   </head>
 
   <body>
@@ -414,7 +414,8 @@
               <source media="(min-width: 768px)" srcset="/group-3-final-project/assets/plums-tab@1x-453f9652.webp 1x, /group-3-final-project/assets/plums-tab@2x-a6ae0490.webp 2x" type="image/webp" />
               <source media="(min-width: 768px)" srcset="/group-3-final-project/assets/plums-tab@1x-01c282b5.png 1x, /group-3-final-project/assets/plums-tab@2x-1d63a1ac.png 2x" type="image/png" />
 
-              <img src="/group-3-final-project/assets/plums-tab@1x-01c282b5.png" alt="Plums" width="295" height="276" loading="lazy" />
+              <img src="./img/fruits-gallery/plums-mob@1x.png 1x" alt="Plums" width="295" height="276" loading="lazy" />
+
             </picture>
           </div>
         </div>
@@ -898,30 +899,28 @@
 </div>
 
     <div class="modal-basket modal" data-modal="3">
-  <button class="basket-close-btn js-modal-close" type="button">
-    <svg class="basket-close-icon">
-      <use href="/group-3-final-project/assets/symbol-defs-bfb235a6.svg#icon-close-btn"></use>
-    </svg>
-  </button>
-  <h2 class="basket-title">basket</h2>
-  <div class="picture-box">
-    <img
-      class="basket"
-      srcset="/group-3-final-project/assets/basket@1x-559571c0.jpg 1x, /group-3-final-project/assets/basket@2x-9a8a3d00.jpg 2x"
-      src="./img/basket@1x.png"
-      alt="empty basket"
-    />
-    <a class="add-btn js-modal-close js-link" href="#fruits">
-      <svg class="add-svg" width="14" height="14">
-        <use href="/group-3-final-project/assets/symbol-defs-bfb235a6.svg#icon-arrow"></use>
-      </svg>
-      <span class="add-text">add fruits</span>
-    </a>
-  </div>
-  <p class="modal-info">
-    Your basket is empty.
-    <span class="help-info"> Press the button to add items.</span>
-  </p>
+
+    <button class="basket-close-btn js-modal-close" type="button">
+        <svg class="basket-close-icon">
+            <use href="/group-3-final-project/assets/symbol-defs-bfb235a6.svg#icon-close-btn"></use>
+        </svg>
+    </button>
+    <h2 class="basket-title">basket</h2>
+    <div class="picture-box">
+        <picture class="basket">
+            <source srcset="./img/basket/basket_w@1x.webp 1x, ./img/basket_w@2x.webp 2x" type="image/webp" />
+            <source srcset="/group-3-final-project/assets/basket@1x-559571c0.jpg 1x, /group-3-final-project/assets/basket@2x-9a8a3d00.jpg 2x" type="image/jpeg" />
+            <img src="/group-3-final-project/assets/basket@1x-559571c0.jpg" alt="empty basket" />
+        </picture>
+        <a class="add-btn js-modal-close" href="#fruits">
+            <svg class="add-svg" width="14" height="14">
+                <use href="/group-3-final-project/assets/symbol-defs-bfb235a6.svg#icon-arrow"></use>
+            </svg>
+        <span class="add-text">add fruits</span>    
+        </a>
+    </div>
+    <p class="modal-info">Your basket is empty. <span class="help-info"> Press the button to add items.</span></p>
+
 </div>
 
 
