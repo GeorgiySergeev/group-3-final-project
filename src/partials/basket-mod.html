@@ -1,26 +1,24 @@
 <div class="modal-basket modal" data-modal="3">
-  <button class="basket-close-btn js-modal-close" type="button">
-    <svg class="basket-close-icon">
-      <use href="./img/svg/symbol-defs.svg#icon-close-btn"></use>
-    </svg>
-  </button>
-  <h2 class="basket-title">basket</h2>
-  <div class="picture-box">
-    <img
-      class="basket"
-      srcset="./img/basket/basket@1x.jpg 1x, ./img/basket/basket@2x.jpg 2x"
-      src="./img/basket@1x.png"
-      alt="empty basket"
-    />
-    <a class="add-btn js-modal-close js-link" href="#fruits">
-      <svg class="add-svg" width="14" height="14">
-        <use href="./img/svg/symbol-defs.svg#icon-arrow"></use>
-      </svg>
-      <span class="add-text">add fruits</span>
-    </a>
-  </div>
-  <p class="modal-info">
-    Your basket is empty.
-    <span class="help-info"> Press the button to add items.</span>
-  </p>
+
+    <button class="basket-close-btn js-modal-close" type="button">
+        <svg class="basket-close-icon">
+            <use href="./img/svg/symbol-defs.svg#icon-close-btn"></use>
+        </svg>
+    </button>
+    <h2 class="basket-title">basket</h2>
+    <div class="picture-box">
+        <picture class="basket">
+            <source srcset="./img/basket/basket_w@1x.webp 1x, ./img/basket_w@2x.webp 2x" type="image/webp" />
+            <source srcset="./img/basket/basket@1x.jpg  1x, ./img/basket/basket@2x.jpg 2x" type="image/jpeg" />
+            <img src="./img/basket/basket@1x.jpg" alt="empty basket" />
+        </picture>
+        <a class="add-btn js-modal-close" href="#fruits">
+            <svg class="add-svg" width="14" height="14">
+                <use href="./img/svg/symbol-defs.svg#icon-arrow"></use>
+            </svg>
+        <span class="add-text">add fruits</span>    
+        </a>
+    </div>
+    <p class="modal-info">Your basket is empty. <span class="help-info"> Press the button to add items.</span></p>
+
 </div>
