@@ -1,7 +1,7 @@
 .hero {
 
     padding-top: 56px;
-    padding-bottom: 80px;
+    padding-bottom: 30px;
 }
 
 @media screen and (min-width: 375px) {
@@ -12,14 +12,14 @@
 
 @media screen and (min-width: 768px) {
     .hero {
-    padding-bottom: 137px;
+    padding-bottom: 87px;
     }
 }
 
 @media screen and (min-width: 1280px) {
     .hero {
     padding-top: 64px;
-    padding-bottom: 150px;
+    padding-bottom: 100px;
     }
 
 }
@@ -466,12 +466,13 @@
 
 .hero-btn-links {
     cursor: default;
+    
 }
 @media screen and (min-width: 768px) {
 .hero-btn-links:hover>.hero-text-title,
 .hero-btn-links:focus>.hero-text-title {
     color: var(--primary-green);
     border-color: var(--primary-green);
+    transition: color var(--animation);
 }
 }
-

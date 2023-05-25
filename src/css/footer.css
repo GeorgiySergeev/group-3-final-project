@@ -21,6 +21,7 @@
   .footer-logo {
     margin-right: 8px;
   }
+
   .logo-text {
     font-style: normal;
     font-weight: 700;
@@ -33,6 +34,12 @@
 
     color: var(--primary-bg-color);
   }
+  .logo-text:hover,
+  .logo-text:focus {
+    color: var(--primary-green);
+    transition: color var(--animation);
+  }
+
   .footer-anchor {
     margin-top: 20px;
 
@@ -159,10 +166,12 @@
   .icon-symbol:hover,
   .icon-symbol:focus {
     background-color: rgba(174, 19, 50, 0.1);
+    transition: background-color var(--animation);
   }
   .anchor-item-text:hover,
   .anchor-item-text:focus {
     color: var(--primary-green);
+    transition: color var(--animation);
   }
 }
 

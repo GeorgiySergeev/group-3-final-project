@@ -87,7 +87,6 @@
           </div>
         </li>
 
-
         <li class="order-item">
           <div class="order-block">
             <h3 class="order-item-name">Apple Basket</h3>
@@ -157,7 +156,6 @@
                         width="229"
                         height="196"
                         loading="lazy"> -->
-
           </div>
         </li>
 
@@ -188,7 +186,6 @@
                 "
                 type="image/png"
               />
-
 
               <!-- Tablet -->
               <source
@@ -232,14 +229,13 @@
                         width="229"
                         height="196"
                         loading="lazy"> -->
-
           </div>
         </li>
       </ul>
     </div>
 
     <div class="client-data">
-      <label class="contact-label" for="user-name">Name</label>
+      <label class="contact-label visually-hidden" for="user-name">Name</label>
       <input
         class="input-modal-field"
         type="text"
@@ -250,8 +246,9 @@
         placeholder="Enter full name..."
       />
 
-
-      <label class="contact-label" for="user-email">Email</label>
+      <label class="contact-label visually-hidden" for="user-email"
+        >Email</label
+      >
       <input
         class="input-modal-field"
         type="email"
@@ -261,20 +258,21 @@
         placeholder="Enter email..."
       />
 
-      <label class="contact-label" for="card-nomber">Card nomber</label>
+      <label class="contact-label visually-hidden" for="card-nomber"
+        >Card number</label
+      >
       <input
         class="input-modal-field"
-        type="number"
-        step="1"
-        min="999999999999999"
-        max="9999999999999999"
+        type="text"
+        pattern="^[0-9]{5,45}$"
+        title="Your card number must be between 5 to 45 digitals."
         required
         name="card-nomber"
         id="card-nomber"
         placeholder="Enter card..."
       />
 
-      <label class="contact-label" for="comment">Comment</label>
+      <label class="contact-label visually-hidden" for="comment">Comment</label>
       <textarea
         class="comment-field"
         name="comment"
@@ -283,9 +281,7 @@
         placeholder="Enter comments..."
       ></textarea>
 
-
       <button class="modal-send-btn button" type="submit">Send</button>
     </div>
   </form>
 </div>
-

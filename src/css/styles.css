@@ -14,8 +14,11 @@
 @import url('./order-modal.css');
 @import url('./thanks-mod.css');
 @import url('./basket-modal.css');
-
-
+/* 
+html {
+  tab-size: 4;
+  scroll-behavior: smooth;
+} */
 body {
   background-color: #ae1332;
   color: #ffffff;
@@ -49,6 +52,7 @@ body {
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
+
 }
 
 @media screen and (min-width: 375px) {
