@@ -4,6 +4,8 @@ const form = document.querySelector('.thank-form');
 const backdrop = document.querySelector('.overlay');
 const openModalBtn = document.querySelector('.contacts-button');
 const closeBtns = document.querySelectorAll('.close-btn');
+const overlay = document.querySelector('.js-overlay-modal');
+
 const openSuccessModal = () => {
   backdrop.classList.add(MODAL_ACTIVE_CLASS_NAME);
   thankModal.classList.add(MODAL_ACTIVE_CLASS_NAME);
@@ -23,4 +25,8 @@ closeBtns.forEach(btn => {
 form.addEventListener('submit', e => {
   e.preventDefault();
   setTimeout(openSuccessModal, 300);
+});
+
+overlay.addEventListener('click', function () {
+  closeSuccessModal();
 });
