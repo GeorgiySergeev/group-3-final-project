@@ -108,9 +108,9 @@ video {
   border-radius: 200px;
 
   animation-name: jump-1;
-  animation-duration: 9s;
-  animation-delay: 3s;
+  animation-duration: 7s;
   animation-iteration-count: infinite;
+  
   
   
 }
@@ -121,15 +121,15 @@ video {
     scale: 1;
   }
 
-  17% {
+  8% {
     scale: 1;
   }
 
-  30% {
+  14% {
     scale: 1.2;
   }
   
-  37% {
+  24% {
     scale: 1;
   }
   
@@ -151,15 +151,15 @@ video {
     scale:1;
   }
 
-  15% {
+  6% {
     scale: 1;
   }
 
-  25% {
+  12% {
     scale: 1.2;
   }
 
-  35%{
+  22%{
     scale: 1;
   }
 
@@ -180,15 +180,15 @@ video {
     scale: 1;
   }
 
-  20% {
+  10% {
     scale: 1;
   }
 
-  35% {
+  18% {
     scale: 1.2
   }
 
-  40% {
+  26% {
     scale: 1;
   }
   
